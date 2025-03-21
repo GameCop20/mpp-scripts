@@ -27,13 +27,21 @@ function viewScript(scriptUrl) {
         .then(code => {
             // Здесь мы устанавливаем полученный текст (код) в элемент с id="script-code"
             document.getElementById('script-code').textContent = code;
+
+            // Устанавливаем заголовок для модального окна
+            const scriptName = scriptUrl.split('/').pop().split('.')[0]; // Используем имя файла без расширения
+            document.getElementById('modal-title').textContent = `${scriptName}'s Source Code`;  // Меняем заголовок
+
             // Показываем модальное окно
             document.getElementById('modal').style.display = 'block';
         })
         .catch(error => alert("Ошибка загрузки кода: " + error));
 }
 
-// Закрытие модального окна
 function closeModal() {
-    document.getElementById('modal').style.display = 'none';
+    document.getElementById('modal').style.display = 'none';  // Закрытие модального окна
 }
+
+// Эта строка автоматически добавит обработчик для клика по кнопке закрытия.
+document.querySelector('.close').addEventListener('click', closeModal);
+
