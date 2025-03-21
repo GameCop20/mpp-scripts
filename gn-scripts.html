@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mpp-scripts | gtnntg's Scripts</title>
+
+</head>
+<script src="./scripts/gc-scripts-script.js"></script>
+<body>
+    <header>
+        <link rel="stylesheet" href="./styles/gc-scripts-styles.css">
+        <nav>
+            <ul id="categories">
+                <li id="main-category">
+                    <a href="./index.html" id="main-link">
+                        Main
+                    </a>
+                </li>
+                <li id="gc-scripts-category">
+                    <a href="./gc-scripts.html" id="gc-link">
+                        GameCop20's Scripts
+                    </a>
+                </li>
+                <li id="gn-scripts-category">
+                    <a href="./gn-scripts.html" id="gn-link">
+                        gtnntg's Scripts
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+        <section class="script-card">
+            <h2>
+                CMB - Custom Mpp Buttons by gtnntg
+            </h2>
+            <p>
+                This script creating new panels & buttons for MultiPlayerPiano to create comfort navigation.
+            </p>
+            <button onclick="installScript('./mpp-scripts/gtnntg/CMB.js', 'CMB.js')">Download</button>
+            <button onclick="viewScript('./mpp-scripts/gtnntg/CMB.js')">View Code</button>
+        </section>
+    
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span id="modal-title">Script Code</span> <!-- Это будет заголовок -->
+                <span class="close" onclick="closeModal()">&times;</span>
+                <pre id="script-code"></pre>
+            </div>
+        </div>
+        
+    </main>
+    
+    <footer></footer>
+</body>
+</html>
