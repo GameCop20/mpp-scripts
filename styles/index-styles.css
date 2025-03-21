@@ -1,0 +1,61 @@
+#categories {
+  list-style: none;
+  text-decoration: none;
+  padding: 15px;
+  background-color: black;
+  margin: 0;
+  background: linear-gradient(90deg, #000000, #1C1C1C, #2A2A2A, #555555, #808080, #A9A9A9, #D3D3D3);
+  
+}
+
+#about {
+  margin-left: 30%;
+}
+
+#about-site {
+  font-size: 30px;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(90deg, #000000, #1C1C1C, #2A2A2A, #555555, #808080, #A9A9A9, #D3D3D3);
+}
+
+
+#main-link {
+  text-decoration: none;
+  font-size: 150%;
+  color: gray;
+  margin-left: 20%;
+}
+
+#gc-link {
+  text-decoration: none;
+  color: gray;
+  font-size: 150%;
+  margin-left: 20%;
+}
+
+#gn-link {
+  text-decoration: none;
+  margin-left: 20%;
+  color: gray;
+  font-size: 150%;
+}
+
+#main-link:hover {
+  text-decoration: underline;
+}
+
+#gc-link:hover {
+  text-decoration: underline;
+}
+
+#gn-link:hover {
+  text-decoration: underline;
+}
+
+#about-site {
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
