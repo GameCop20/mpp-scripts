@@ -3,9 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>mpp-scripts | GameCop20's Scripts</title>
+
 </head>
+<script src="./scripts/gc-scripts-script.js"></script>
 <body>
+    <header>
+        <link rel="stylesheet" href="./styles/gc-scripts-styles.css">
+        <nav>
+            <ul id="categories">
+                <li id="main-category">
+                    <a href="./index.html" id="main-link">
+                        Main
+                    </a>
+                </li>
+                <li id="gc-scripts-category">
+                    <a href="./gc-scripts.html" id="gc-link">
+                        GameCop20's Scripts
+                    </a>
+                </li>
+                <li id="gn-scripts-category">
+                    <a href="./gn-scripts.html" id="gn-link">
+                        gtnntg's Scripts
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+        <section class="script-card">
+            <h2>
+                RCP (Room Controls Panel)
+            </h2>
+            <p>
+                This script adds panels that help you with room controls.
+            </p>
+            <button onclick="installScript('https:/\n/raw.githubusercontent.com/GameCop20/RCP-Room-Controls-Panel/refs/heads/main/RCP', 'RCP.js')">Download</button>
+            <button onclick="viewScript('https:/\n/raw.githubusercontent.com/GameCop20/RCP-Room-Controls-Panel/refs/heads/main/RCP')">View Code</button>
+        </section>
     
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <pre id="script-code"></pre>
+            </div>
+        </div>
+    </main>
+    
+    <footer></footer>
 </body>
 </html>
