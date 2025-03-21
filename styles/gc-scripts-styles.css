@@ -71,10 +71,9 @@ body, html {
     background: darkgray;
 }
 
-/* Стили для модального окна */
-/* Стили для модального окна */
+
 .modal {
-    display: none;  /* По умолчанию окно скрыто */
+    display: none;
     position: fixed;
     z-index: 1000;
     left: 0;
@@ -84,7 +83,7 @@ body, html {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Стили для контента модального окна */
+
 .modal-content {
     user-select: none;
     background-color: #222;
@@ -94,41 +93,48 @@ body, html {
     width: 60%;
     border-radius: 10px;
     box-shadow: 0px 0px 10px white;
-    position: relative; /* Для корректного позиционирования кнопки закрытия */
+    position: relative; 
 }
 
-/* Заголовок модального окна */
+
 #modal-title {
     font-size: 1.5em;
     font-weight: bold;
-    text-align: center;
-    margin-bottom: 20px; /* Немного отступа от заголовка */
+    text-align: center; /* This centers the text */
+    margin-bottom: 20px;
+    width: 100%; /* Ensure it takes full width of the container */
+    display: block; /* Ensure it behaves as a block element */
 }
 
-/* Кнопка закрытия */
+
 .close {
     color: red;
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
     position: absolute;
-    top: 10px;  /* Размещаем кнопку на 10px от верхнего края */
-    right: 10px;  /* Размещаем кнопку на 10px от правого края */
+    top: 10px;
+    right: 10px; /* Position it in the top-right corner */
     transition: color 0.3s;
 }
 
+
 .close:hover {
-    color: white;  /* Цвет меняется при наведении */
+    color: white;
 }
 
-/* Стили для кода */
+
 pre {
     white-space: pre-wrap;
     word-wrap: break-word;
     max-height: 400px;
     overflow-y: auto;
-    background-color: #333;  /* Подсветка кода */
+    background-color: #333;
     padding: 15px;
-    border-radius: 5px;
-    color: lightgray;
+    color: inherit; /* Use inherit to take the color from the parent element */
+    font-size: 16px; /* Adjust font size to a normal size */
+    font-weight: normal; /* Set font weight to normal */
+    cursor: default; /* Change cursor to default */
+    position: static; /* Remove absolute positioning */
+    transition: none; /* Remove transition effect */
 }
