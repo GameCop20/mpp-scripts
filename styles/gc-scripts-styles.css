@@ -1,4 +1,4 @@
-#categories {
+.categories {
     list-style: none;
     padding: 15px;
     margin: 0;
@@ -7,18 +7,18 @@
     background: linear-gradient(90deg, #000000, #1C1C1C, #2A2A2A, #555555, #808080, #A9A9A9, #D3D3D3);
 }
 
-#categories li {
+.categories li {
     margin: 0 20px;
 }
 
-#categories a {
+.categories-list a {
     text-decoration: none;
     font-size: 150%;
     color: lightgray;
     font-family: "Courier New", monospace;
 }
 
-#categories a:hover {
+.categories-list a:hover {
     text-decoration: underline;
 }
 

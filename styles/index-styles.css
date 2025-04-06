@@ -1,4 +1,4 @@
-#categories {
+.categories-list {
   list-style: none;
   padding: 15px;
   margin: 0;
@@ -7,34 +7,34 @@
   background: linear-gradient(90deg, #000000, #1C1C1C, #2A2A2A, #555555, #808080, #A9A9A9, #D3D3D3);
 }
 
-#categories li {
+.categories-item {
   margin: 0 20px;
 }
 
-#categories a {
+.categories-item a {
   text-decoration: none;
   font-size: 150%;
   color: lightgray;
-  font-family: "Courier New", monospace;
+  font-family: "Courier Prime", monospace;
 }
 
-#categories a:hover {
+.categories-list a:hover {
   text-decoration: underline;
 }
 
-#about {
+.about-container {
   max-width: 60%;
   margin: 10% auto;
   text-align: center;
 }
 
-#about-site {
+.about-site {
   font-size: 30px;
   color: white;
   font-family: "Courier New", monospace;
 }
 
-#about-site-h {
+.about-site-h {
   color: darkgray;
   font-family: "Courier New", monospace;
 }
@@ -42,10 +42,10 @@
 body, html {
   margin: 0;
   padding: 0;
-  background: linear-gradient(90deg, #000000, #1C1C1C, #2A2A2A, #555555, #808080, #A9A9A9, #D3D3D3);
+  background: linear-gradient(90deg, #000000 0%, #1C1C1C 16.67%, #2A2A2A 33.33%, #555555 50%, #808080 66.67%, #A9A9A9 83.33%, #D3D3D3 100%);
 }
 
-#foot-h, #foot-p {
+.footer-h, .footer-address {
   color: white;
   font-family: "Courier New", monospace;
   text-align: center;
