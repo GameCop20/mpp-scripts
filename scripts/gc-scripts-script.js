@@ -1,47 +1,93 @@
-function installScript(url, fileName) {
+try {
+  const overlay = document.querySelector(`.overlay`);
+  const modalWindow = document.querySelector(`.modal`);
+  const modalCloseBtn = document.querySelector(`.modal-close-btn`);
+
+  const modalPre = document.querySelector(`.modal-pre`);
+  const modalTitle = document.querySelector(`.modal-title`);
+
+  const viewCodeBtns = document.querySelectorAll(`.view-btn`);
+  const downloadBtns = document.querySelectorAll(`.download-btn`);
+
+  // Function to view the script based on the URL
+  const viewScript = (url) => {
+    fetch(url)
+      .then((response) => response.text())
+      .then((code) => {
+        // Split the code into lines and add line numbers
+        const lines = code.split("\n");
+        const numberedCode = lines
+          .map((line, index) => `${index + 1}. ${line}`)
+          .join("\n");
+
+        modalPre.textContent = numberedCode;
+
+        const scriptName = url.split("/").pop().split(".")[0];
+        modalTitle.textContent = scriptName;
+
+        overlay.style.display = `block`;
+        modalWindow.style.display = `block`;
+      })
+      .catch((error) => alert("Ошибка загрузки кода: " + error));
+  };
+
+  // Function to download the script based on the URL and filename
+  const downloadScript = (url, fileName) => {
     try {
-        fetch(url)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Ошибка при загрузке файла');
-                }
-                return response.text();
-            })
-            .then(data => {
-                const blob = new Blob([data], { type: 'application/javascript' });
-                const link = document.createElement('a');
-                link.href = URL.createObjectURL(blob);
-                link.download = fileName;
-                link.click();  // Симуляция скачивания файла
-            })
-            .catch(err => {
-                console.error('Ошибка загрузки файла:', err.message);
-            });
-    } catch (err) {
-        console.error('Ошибка обработки файла:', err.message);
-    }
-}
-function viewScript(scriptUrl) {
-    fetch(scriptUrl)  // Загружаем содержимое файла скрипта по URL
-        .then(response => response.text())  // Преобразуем в текст
-        .then(code => {
-            // Здесь мы устанавливаем полученный текст (код) в элемент с id="script-code"
-            document.getElementById('script-code').textContent = code;
-
-            // Устанавливаем заголовок для модального окна
-            const scriptName = scriptUrl.split('/').pop().split('.')[0]; // Используем имя файла без расширения
-            document.getElementById('modal-title').textContent = `${scriptName}'s Source Code`;  // Меняем заголовок
-
-            // Показываем модальное окно
-            document.getElementById('modal').style.display = 'block';
+      fetch(url)
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error(`Ошибка при загрузке файла.`);
+          }
+          return response.text();
         })
-        .catch(error => alert("Ошибка загрузки кода: " + error));
+        .then((data) => {
+          const blob = new Blob([data], { type: "application/javascript" });
+          const link = document.createElement(`a`);
+
+          link.href = URL.createObjectURL(blob);
+          link.download = fileName;
+          link.click();
+        })
+        .catch((err) => {
+          console.error(`Ошибка при загрузке файла: ${err.message}`);
+        });
+    } catch (err) {
+      if (err) throw err;
+    }
+  };
+
+  // Add event listeners to download buttons with data attributes
+  downloadBtns.forEach((button) => {
+    button.addEventListener("click", () => {
+      const scriptUrl = button.getAttribute("data-script-url");
+      const scriptName = button
+        .closest(".script-card")
+        .querySelector(".script-title")
+        .getAttribute("data-script-name");
+      if (scriptUrl && scriptName) {
+        downloadScript(scriptUrl, `${scriptName}.js`);
+      } else {
+        alert("URL или имя файла для скрипта не найдено.");
+      }
+    });
+  });
+  // Add event listeners to buttons with data attributes
+  viewCodeBtns.forEach((button) => {
+    button.addEventListener("click", () => {
+      const scriptUrl = button.getAttribute("data-script-url");
+      if (scriptUrl) {
+        viewScript(scriptUrl);
+      } else {
+        alert("URL для скрипта не найден.");
+      }
+    });
+  });
+
+  modalCloseBtn.addEventListener(`click`, () => {
+    overlay.style.display = `none`;
+    modalWindow.style.display = `none`;
+  });
+} catch (err) {
+  if (err) throw err;
 }
-
-function closeModal() {
-    document.getElementById('modal').style.display = 'none';  // Закрытие модального окна
-}
-
-// Эта строка автоматически добавит обработчик для клика по кнопке закрытия.
-document.querySelector('.close').addEventListener('click', closeModal);
-
