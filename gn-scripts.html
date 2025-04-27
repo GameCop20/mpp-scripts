@@ -1,58 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>mpp-scripts | gtnntg's Scripts</title>
-
-</head>
-<script src="./scripts/gc-scripts-script.js"></script>
-<body>
-    <header>
-        <link rel="stylesheet" href="./styles/gc-scripts-styles.css">
-        <nav>
-            <ul class="categories-list">
-                <li class="categories-item">
-                    <a href="./index.html" class="main-link">
-                        Main
-                    </a>
-                </li>
-                <li class="categories-item">
-                    <a href="./gc-scripts.html" class="gc-link">
-                        GameCop20's Scripts
-                    </a>
-                </li>
-                <li class="categories-item">
-                    <a href="./gn-scripts.html" class="gn-link">
-                        gtnntg's Scripts
-                    </a>
-                </li>
-            </ul>
-        </nav>
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/gn-scripts-style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="header-nav">
+        <div class="logo">MPP Scripts</div>
+        <ul class="categories-list">
+          <li class="categories-item">
+            <a href="./index.html" class="main-link">Main</a>
+          </li>
+          <li class="categories-item">
+            <a href="./gc-scripts.html" class="gc-link">GameCop20's Scripts</a>
+          </li>
+          <li class="categories-item">
+            <a href="./gn-scripts.html" class="gn-link">gtnntg's Scripts</a>
+          </li>
+        </ul>
+      </nav>
     </header>
     <main>
-        
+      <div class="container">
         <section class="script-card">
-            <h2>
-                CMB - Custom Mpp Buttons by gtnntg
-            </h2>
-            <p>
-                This script creating new panels & buttons for MultiPlayerPiano to create comfort navigation.
-            </p>
-            <button onclick="installScript('https:/\n/update.greasyfork.org/scripts/486707/CMB%20-%20Custom%20Mpp%20Buttons%20by%20gtnntg.user.js', 'CMB.js')">Download</button>
-            <button onclick="viewScript('https:/\n/update.greasyfork.org/scripts/486707/CMB%20-%20Custom%20Mpp%20Buttons%20by%20gtnntg.user.js')">View Code</button>
+          <h2 class="script-title" data-script-name="CMB">
+            CMB - Custom MPP Buttons by gtnntg
+          </h2>
+          <p class="script-desc">
+            This script creating new panels & buttons for MultiPlayerPiano to
+            create comfort navigation
+          </p>
+          <div class="btn-container">
+            <button
+              class="view-btn"
+              data-script-url="https://raw.githubusercontent.com/Zeroxel/CMB-Custom-Mpp-Buttons/refs/heads/main/CMB"
+            >
+              View Code
+            </button>
+            <button
+              class="download-btn"
+              data-script-url="https://raw.githubusercontent.com/Zeroxel/CMB-Custom-Mpp-Buttons/refs/heads/main/CMB"
+            >
+              Download Code
+            </button>
+          </div>
         </section>
-    
-        <div id="modal" class="modal">
-            <div class="modal-content">
-                <span id="modal-title">Script Code</span> <!-- Это будет заголовок -->
-                <span class="close" onclick="closeModal()">&times;</span>
-                <pre id="script-code"></pre>
-            </div>
+      </div>
+
+      <div class="overlay"></div>
+      <div class="modal" id="modal">
+        <div class="modal-content">
+          <span class="modal-close-btn">&times;</span>
+          <span class="modal-title"></span>
+          <pre class="modal-pre"></pre>
         </div>
-        
+      </div>
     </main>
-    
+
     <footer></footer>
-</body>
+    <script src="./scripts/gc-scripts-script.js"></script>
+  </body>
 </html>
