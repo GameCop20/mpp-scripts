@@ -1,73 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="wclassth=device-wclassth, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="wclassth=device-wclassth, initial-scale=1.0"
+    />
     <title>Scripts | Main</title>
-    <link rel="icon" href="./img/terminal.png">
-    <link rel="stylesheet" href="./styles/index-styles.css">
-</head>
+    <link rel="icon" href="./img/terminal.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=New+Rocker&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/index-style.css" />
+  </head>
 
-<body>
-    <header>
-        <nav>
-            <ul class="categories-list">
-                <li class="categories-item">
-                    <a href="./index.html" class="main-link">
-                        Main
-                    </a>
-                </li>
-                <li class="categories-item">
-                    <a href="./gc-scripts.html" class="gc-link">
-                        GameCop20's Scripts
-                    </a>
-                </li>
-                <li class="categories-item">
-                    <a href="./gn-scripts.html" class="gn-link">
-                        gtnntg's Scripts
-                    </a>
-                </li>
-            </ul>
-        </nav>
+  <body>
+    <header class="header">
+      <nav class="header-nav">
+        <div class="logo">MPP Scripts</div>
+        <ul class="categories-list">
+          <li class="categories-item">
+            <a href="./index.html" class="main-link">Main</a>
+          </li>
+          <li class="categories-item">
+            <a href="./gc-scripts.html" class="gc-link">GameCop20's Scripts</a>
+          </li>
+          <li class="categories-item">
+            <a href="./gn-scripts.html" class="gn-link">gtnntg's Scripts</a>
+          </li>
+        </ul>
+      </nav>
     </header>
-    <main>
-      <div class="about-container">
-          <h1 class="about-site-h">
-            What is this site about?
-          </h1>
-          <p class="about-site">
-            This site is about various scripts from the Authors: <br>
-            GameCop20
-            &
-            gtnntg
-          </p>
-          <img src="./img/folder.png" class="about-site-img">
+    <main class="main">
+      <div class="container about">
+        <h1 class="about-title">MPP Scripts | Hub</h1>
+        <p class="about-p">
+          This site is about various scripts by Authors:
+          <span class="about-span">
+            <button class="link-btn gamecop20">GameCop20</button>
+            <button class="link-btn zeroxel">Zeroxel</button>
+          </span>
+        </p>
+        <img src="./img/scripts.PNG" class="about-img" />
+      </div>
+      <div class="overlay" id="overlay"></div>
+      <div class="modal" id="modal">
+        <span class="modal-close-btn">&times;</span>
+        <div class="modal-content">
+          <pre class="modal-pre">
+      <p class="modal-p">Are you sure to redirect to this page?</p>
+      <div class="modal-buttons">
+        <button class="modal-btn yes">Yes</button>
+        <button class="modal-btn no">No</button>
+      </div>
+    </pre>
+        </div>
       </div>
     </main>
-    <footer class="footer">
-        <h2 class="footer-h">
-            mpp-scripts
-        </h2>
-        <address class="footer-address">
-            <ul class="address-list">
-                <li class="address-list-item">
-                    <a href="#" class="">
-                        Discord: gamecop20new
-                    </a>
-                </li>
-                <li class="address-list-item">
-                    <a href="#">
-                        Email: MatvijPС@outlook.com
-                    </a>
-                </li>
-                <li class="address-list-item">
-                    <a href="">
-    
-                    </a>
-                </li>
-            </ul>
-        </address>
-        
-    </footer>
-</body>
+    <script src="./scripts/index-script.js"></script>
+  </body>
 </html>
