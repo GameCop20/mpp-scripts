@@ -1,69 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>mpp-scripts | GameCop20's Scripts</title>
-
-</head>
-<script src="./scripts/gc-scripts-script.js"></script>
-<body>
-    <header>
-        <link rel="stylesheet" href="./styles/gc-scripts-styles.css">
-        <nav>
-            <ul class="categories-list">
-                <li class="categories-item">
-                    <a href="./index.html" class="main-link">
-                        Main
-                    </a>
-                </li>
-                <li class="categories-item">
-                    <a href="./gc-scripts.html" class="gc-link">
-                        GameCop20's Scripts
-                    </a>
-                </li>
-                <li class="categories-item">
-                    <a href="./gn-scripts.html" class="gn-link">
-                        gtnntg's Scripts
-                    </a>
-                </li>
-            </ul>
-        </nav>
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/gc-scripts-style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="header-nav">
+        <div class="logo">MPP Scripts</div>
+        <ul class="categories-list">
+          <li class="categories-item">
+            <a href="./index.html" class="main-link">Main</a>
+          </li>
+          <li class="categories-item">
+            <a href="./gc-scripts.html" class="gc-link">GameCop20's Scripts</a>
+          </li>
+          <li class="categories-item">
+            <a href="./gn-scripts.html" class="gn-link">gtnntg's Scripts</a>
+          </li>
+        </ul>
+      </nav>
     </header>
     <main>
-        
+      <div class="container">
         <section class="script-card">
-            <h2>
-                RCP (Room Controls Panel)
-            </h2>
-            <p>
-                This script adds panels that help you with room controls.
-            </p>
-            <button onclick="installScript('https:/\n/raw.githubusercontent.com/GameCop20/RCP-Room-Controls-Panel/refs/heads/main/RCP', 'RCP.js')">Download</button>
-            <button onclick="viewScript('https:/\n/raw.githubusercontent.com/GameCop20/RCP-Room-Controls-Panel/refs/heads/main/RCP')">View Code</button>
+          <h2 class="script-title" data-script-name="RCP">
+            RCP (Room Controls Panel)
+          </h2>
+          <p class="script-desc">
+            This script adds panels that help you with room controls.
+          </p>
+          <div class="btn-container">
+            <button
+              class="view-btn"
+              data-script-url="https://raw.githubusercontent.com/GameCop20/RCP-Room-Controls-Panel/refs/heads/main/RCP"
+            >
+              View Code
+            </button>
+            <button
+              class="download-btn"
+              data-script-url="https://raw.githubusercontent.com/GameCop20/RCP-Room-Controls-Panel/refs/heads/main/RCP"
+            >
+              Download Code
+            </button>
+          </div>
         </section>
+      </div>
 
-        <section class="script-card">
-            <h2>
-                [NEW] MPPG (MPP Guardian)
-            </h2>
-            <p>
-                This script helps with moderate using commands.
-            </p>
-            <button onclick="installScript('https:/\n/raw.githubusercontent.com/GameCop20/MPPG/refs/heads/main/MPPG.js', 'MPPG.js')">Download</button>
-            <button onclick="viewScript('https:/\n/raw.githubusercontent.com/GameCop20/MPPG/refs/heads/main/MPPG.js')">View Code</button>
-        </section>
-    
-        <div id="modal" class="modal">
-            <div class="modal-content">
-                <span id="modal-title">Script Code</span> <!-- Это будет заголовок -->
-                <span class="close" onclick="closeModal()">&times;</span>
-                <pre id="script-code"></pre>
-            </div>
+      <div class="overlay"></div>
+      <div class="modal" id="modal">
+        <div class="modal-content">
+          <span class="modal-close-btn">&times;</span>
+          <span class="modal-title"></span>
+          <pre class="modal-pre"></pre>
         </div>
-        
+      </div>
     </main>
-    
+
     <footer></footer>
-</body>
+    <script src="./scripts/gc-scripts-script.js"></script>
+  </body>
 </html>
