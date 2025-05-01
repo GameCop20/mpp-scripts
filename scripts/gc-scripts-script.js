@@ -58,31 +58,40 @@ try {
   };
 
   // Add event listeners to download buttons with data attributes
-  downloadBtns.forEach((button) => {
-    button.addEventListener("click", () => {
-      const scriptUrl = button.getAttribute("data-script-url");
-      const scriptName = button
-        .closest(".script-card")
-        .querySelector(".script-title")
-        .getAttribute("data-script-name");
-      if (scriptUrl && scriptName) {
-        downloadScript(scriptUrl, `${scriptName}.js`);
+  // Add event listeners to download buttons with data attributes
+downloadBtns.forEach((button) => {
+  button.addEventListener("click", () => {
+    const scriptUrl = button.getAttribute("data-script-url");
+    const scriptCard = button.closest(".script-card");
+    if (scriptCard) {
+      const scriptTitle = scriptCard.querySelector(".script-title");
+      if (scriptTitle) {
+        const scriptName = scriptTitle.getAttribute("data-script-name");
+        if (scriptUrl && scriptName) {
+          downloadScript(scriptUrl, `${scriptName}.js`);
+        } else {
+          alert("URL или имя файла для скрипта не найдено.");
+        }
       } else {
-        alert("URL или имя файла для скрипта не найдено.");
+        console.error("Element with class '.script-title' not found.");
       }
-    });
+    } else {
+      console.error("Element with class '.script-card' not found.");
+    }
   });
-  // Add event listeners to buttons with data attributes
-  viewCodeBtns.forEach((button) => {
-    button.addEventListener("click", () => {
-      const scriptUrl = button.getAttribute("data-script-url");
-      if (scriptUrl) {
-        viewScript(scriptUrl);
-      } else {
-        alert("URL для скрипта не найден.");
-      }
-    });
+});
+
+// Add event listeners to buttons with data attributes
+viewCodeBtns.forEach((button) => {
+  button.addEventListener("click", () => {
+    const scriptUrl = button.getAttribute("data-script-url");
+    if (scriptUrl) {
+      viewScript(scriptUrl);
+    } else {
+      alert("URL для скрипта не найден.");
+    }
   });
+});
 
   modalCloseBtn.addEventListener(`click`, () => {
     overlay.style.display = `none`;
