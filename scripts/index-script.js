@@ -13,40 +13,42 @@ try {
     const yes = document.querySelector(`.yes`);
     const no = document.querySelector(`.no`);
 
-    let redirectUrl;
+    let redirectUrl = null; // обязательно объяви это выше
 
     profButtons.forEach((btn) => {
       if (btn) {
         btn.addEventListener("click", () => {
-          overlay.style.display = `block`;
-          modalWindow.style.display = `block`;
+          overlay.style.display = "block";
+          modalWindow.style.display = "block";
 
           if (btn === gc20Button) {
-            redirectUrl = `https://github.com/GameCop20`;
+            redirectUrl = "https://github.com/GameCop20";
           } else if (btn === zlButton) {
-            redirectUrl = `https://github.com/Zeroxel`;
+            redirectUrl = null; // отменяем редирект
+          } else {
+            redirectUrl = null; // по умолчанию
           }
         });
       } else {
-        console.error(`No buttons was found.`);
+        console.error("No buttons were found.");
       }
     });
 
     yes.addEventListener("click", () => {
-      const existingRedirectText = document.querySelector(`.redirect-text`);
+      const existingRedirectText = document.querySelector(".redirect-text");
 
-      if (!existingRedirectText) {
+      if (!existingRedirectText && redirectUrl) {
+        // проверяем, есть ли URL
         const duration = Math.floor(Math.random() * 5000) + 1;
         const durationInSeconds = duration / 1000;
 
-        const newRedirectText = document.createElement(`p`);
-        newRedirectText.classList.add(`redirect-text`);
-
+        const newRedirectText = document.createElement("p");
+        newRedirectText.classList.add("redirect-text");
         newRedirectText.textContent = `Redirecting... Please wait for ${durationInSeconds} seconds`;
 
-        newRedirectText.style.fontSize = `25px`;
-        newRedirectText.style.justifySelf = `center`;
-        newRedirectText.style.fontFamily = `New Rocker`;
+        newRedirectText.style.fontSize = "25px";
+        newRedirectText.style.justifySelf = "center";
+        newRedirectText.style.fontFamily = "New Rocker";
         modalWindow.appendChild(newRedirectText);
 
         setTimeout(() => {
@@ -54,6 +56,8 @@ try {
           modalWindow.removeChild(newRedirectText);
           closeModal();
         }, duration);
+      } else if (!redirectUrl) {
+        closeModal(); // просто закрываем без редиректа
       }
     });
 

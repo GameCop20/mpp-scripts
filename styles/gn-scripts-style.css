@@ -1,3 +1,4 @@
+/*
 body {
   background: linear-gradient(100deg, #2c3e50 0%, #bdc3c7 50%, #ecf0f1 100%);
 }
@@ -16,86 +17,84 @@ body {
 }
 
 .categories-item {
-  margin: 0 15px; /* Space between list items */
+  margin: 0 15px; 
 }
 
 .header-nav a {
-  color: #ecf0f1; /* Set link color */
-  text-decoration: none; /* Remove underline */
-  font-size: 18px; /* Set font size */
-  transition: color 0.3s ease; /* Smooth transition for hover effect */
+  color: #ecf0f1; 
+  text-decoration: none; /
+  font-size: 18px; 
+  transition: color 0.3s ease;
 }
 
 .header-nav a:hover {
-  color: #bdc3c7; /* Change color on hover */
+  color: #bdc3c7; 
 }
 
 .header-nav .logo {
-  font-size: 24px; /* Larger font size for logo */
-  font-weight: bold; /* Bold font for logo */
-  color: #ecf0f1; /* Logo color */
+  font-size: 24px; 
+  font-weight: bold; 
+  color: #ecf0f1; 
 }
 
 .container {
-  display: flex; /* Enable Flexbox layout */
-  justify-content: center; /* Center items horizontally */
-  align-items: flex-start; /* Align items at the top */
-  min-height: calc(
+  display: flex; 
+  justify-content: center; 
+  align-items: flex-start; 
     100vh - 60px
-  ); /* Adjust height to account for the nav bar height */
-  padding-top: 20px; /* Add padding to create space below the nav bar */
-}
+  );
+  padding-top: 20px; 
 
 .script-card {
-  display: flex; /* Enable Flexbox layout */
-  flex-direction: column; /* Stack items vertically */
-  align-items: center; /* Center items horizontally */
-  padding: 20px; /* Add padding for spacing */
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  padding: 20px; 
   background: linear-gradient(
     135deg,
     rgba(128, 128, 128, 0.5),
     rgba(192, 192, 192, 0.5)
-  ); /* Background with transparency */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  max-width: 600px; /* Set a maximum width */
-  width: 100%; /* Ensure it takes full width up to max-width */
-  margin: 0 auto; /* Center horizontally */
+  ); 
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px; 
+  width: 100%;
+  margin: 0 auto; 
 }
 
 .view-btn,
 .download-btn {
-  background-color: #3498db; /* Primary button color */
-  color: #ffffff; /* Text color */
-  border: none; /* Remove default border */
-  border-radius: 5px; /* Rounded corners */
-  padding: 10px 20px; /* Padding for size */
-  font-size: 16px; /* Font size */
-  cursor: pointer; /* Pointer cursor on hover */
-  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition for hover effects */
-  margin: 10px 5px; /* Space between buttons */
+  background-color: #3498db; 
+  color: #ffffff; 
+  border: none;
+  border-radius: 5px; 
+  padding: 10px 20px; 
+  font-size: 16px; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease, transform 0.2s ease; 
+  margin: 10px 5px; 
 }
 
 .view-btn:hover,
 .download-btn:hover {
-  background-color: #2980b9; /* Darker shade on hover */
-  transform: translateY(-2px); /* Slight lift effect on hover */
+  background-color: #2980b9; 
+  transform: translateY(-2px);
 }
 
 .view-btn:active,
 .download-btn:active {
-  transform: translateY(0); /* Reset lift effect on click */
+  transform: translateY(0); 
 }
 
 .overlay {
-  display: none; /* Initially hidden */
+  display: none; 
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
-  z-index: 1000; /* Ensure it appears above other content */
+  background-color: rgba(0, 0, 0, 0.5); 
+  z-index: 1000;
 }
 
 .modal {
@@ -125,10 +124,10 @@ body {
 .modal-title {
   font-size: 1.5em;
   font-weight: bold;
-  text-align: center; /* This centers the text */
+  text-align: center;
   margin-bottom: 20px;
-  width: 100%; /* Ensure it takes full width of the container */
-  display: block; /* Ensure it behaves as a block element */
+  width: 100%; 
+  display: block; 
 }
 
 .modal-close-btn {
@@ -138,7 +137,7 @@ body {
   cursor: pointer;
   position: absolute;
   top: 10px;
-  right: 10px; /* Position it in the top-right corner */
+  right: 10px; 
   transition: color 0.3s;
 }
 
@@ -159,7 +158,8 @@ body {
   cursor: default;
   position: static;
   transition: none;
-  line-height: 1.5; /* Adjust line height for better readability */
-  margin: 0; /* Ensure no margin is applied */
-  font-family: "Courier New", Courier, monospace; /* Use a monospace font */
+  line-height: 1.5; 
+  margin: 0; 
+  font-family: "Courier New", Courier, monospace; 
 }
+*/

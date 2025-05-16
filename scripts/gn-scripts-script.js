@@ -1,3 +1,4 @@
+/*
 try {
   document.addEventListener("DOMContentLoaded", () => {
     const overlay = document.querySelector(`.overlay`);
@@ -82,3 +83,4 @@ try {
 } catch (err) {
   if (err) throw err;
 }
+*/
